@@ -8,6 +8,7 @@ import { HomeChild1Level1Component } from './home-child1-level1/home-child1-leve
 import { HomeChild2Level1Component } from './home-child2-level1/home-child2-level1.component';
 import { HomeChild3Level1Component } from './home-child3-level1/home-child3-level1.component';
 import { InvalidChildComponent } from './invalid-child/invalid-child.component';
+import { ProductComponent } from './products/products.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent,
@@ -15,10 +16,11 @@ const routes: Routes = [
       {path:'child1l1', component:HomeChild1Level1Component},
       {path:'child2l1', component:HomeChild2Level1Component},
       {path:'child3l1', component:HomeChild3Level1Component},
-      {path:'*', component:InvalidChildComponent}
+      {path:'', redirectTo: 'child2l1', pathMatch: 'full'}
     ]
   },
-  {path:'about', component:AboutComponent},
+  {path:'products', component: ProductComponent},
+  {path:'about/:id', component:AboutComponent},
   {path:'contact', component:ContactComponent},
   {path:'', redirectTo: 'home', pathMatch: 'full'},
   {path:'**', component: PageNotFoundComponent}

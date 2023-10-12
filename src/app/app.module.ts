@@ -14,6 +14,9 @@ import { HomeChild1Level2Component } from './home-child1-level2/home-child1-leve
 import { HomeChild2Level2Component } from './home-child2-level2/home-child2-level2.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InvalidChildComponent } from './invalid-child/invalid-child.component';
+import { ProductComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,15 @@ import { InvalidChildComponent } from './invalid-child/invalid-child.component';
     HomeChild1Level2Component,
     HomeChild2Level2Component,
     InvalidChildComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
